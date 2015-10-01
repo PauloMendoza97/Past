@@ -2,17 +2,6 @@
 #include <math.h>
 using namespace std;
 
-float p;
-float q;
-float r;
-float s;
-float a;
-float b;
-float c;
-float d;
-float d1;
-float d2;
-
 class Point{
 public:
 	double x,y;
@@ -24,6 +13,7 @@ public:
 };
 
 int main() {
+    float p, q, r, s, a, b, c, d, d1, d2;
 	Vector vec1;
 	vec1.start.x = 3.0;
 	vec1.start.y = 4.0;
