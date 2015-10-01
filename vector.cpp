@@ -1,40 +1,25 @@
 #include <iostream>
+#include "vector.h"
 #include <math.h>
+
 using namespace std;
 
-class Point{
-public:
-	double x,y;
-};
+double Vector::distance(){
+	cout<<"Distancia del Vector: ";
+	return sqrt(((pow(end.x-start.x,2))+(pow(end.y-start.y,2))));
+}
 
-class Vector{
-public:
-	Point start, end;
-};
+void Vector::print(){
+	cout<<"Vector: "<<"("<<start.x<<","<<end.x<<")"<<" a "<<"("<<start.y<<","<<end.y<<")"<<endl;
+}
 
 int main() {
-    float p, q, r, s, a, b, c, d, d1, d2;
 	Vector vec1;
-	vec1.start.x = 3.0;
-	vec1.start.y = 4.0;
-	vec1.end.x = 5.0;
-	vec1.end.y = 6.0;
-	Vector vec2;
-	vec2.start = vec1.start;
-	vec2.end.x = 7.0;
-	vec2.end.y = 8.0;
-	p = vec1.start.x;
-	q = vec1.end.x;
-	r = vec1.start.y;
-	s = vec1.end.y;
-	a = vec2.start.x;
-	b = vec2.end.x;
-	c = vec2.start.y;
-	d = vec2.end.y;
-	d1 = sqrt(((pow(q-p,2))+(pow(s-r,2))));
-	d2 = sqrt(((pow(b-a,2))+(pow(d-c,2))));
-	cout<<"Vector 1: "<<"("<<p<<","<<q<<")"<<" a "<<"("<<r<<","<<s<<")"<<endl;
-	cout<<"Vector 2: "<<"("<<a<<","<<b<<")"<<" a "<<"("<<c<<","<<d<<")"<<endl;
-	cout<<"Distancia del Vector 1: "<<d1<<endl;
-	cout<<"Distancia del Vector 2: "<<d2<<endl;
+	vec1.start.x = 3;
+	vec1.start.y = 4;
+	vec1.end.x = 5;
+	vec1.end.y = 6;
+	vec1.print();
+	double distance = vec1.distance();
+	cout<<distance<<endl;
 }
