@@ -1,4 +1,4 @@
-//vector.h - header file
+//circulo.h - header file
 
 class Point{
 public:
