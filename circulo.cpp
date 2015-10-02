@@ -15,6 +15,16 @@ double Vector::diameter(){
 	return sqrt(pow((end.x-start.x),2)+pow((end.y-start.y),2))*2;
 }
 
+double Vector::area(){
+	cout<<"Area: ";
+	return pi*pow(sqrt(pow((end.x-start.x),2)+pow((end.y-start.y),2)),2);
+}
+
+double Vector::perimeter(){
+	cout<<"Perimetro: ";
+	return pi*sqrt(pow((end.x-start.x),2)+pow((end.y-start.y),2))*2;
+}
+
 void Vector::print(){
 	cout<<"Centro: "<<"("<<start.x<<","<<start.y<<")"<<endl;
 }
@@ -32,6 +42,8 @@ int main() {
 	cout<<rad<<endl;
 	double diameter = vec1.diameter();
 	cout<<diameter<<endl;
-	cout<<"Area: "<<pi*pow(rad,2)<<endl;
-	cout<<"Perimetro: "<<2*pi*rad<<endl;
+	double area = vec1.area();
+	cout<<area<<endl;
+	double perimeter = vec1.perimeter();
+	cout<<perimeter<<endl;
 }
