@@ -10,11 +10,7 @@ public:
 	Point start, end;
 	double rad();
 	double diameter();
+	double area();
+	double perimeter();
 	void print();
-};
-
-class Circle{
-public:
-	void area();
-	void perimeter();
 };
