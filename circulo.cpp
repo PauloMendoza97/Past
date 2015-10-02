@@ -1,37 +1,32 @@
 #include <iostream>
 #include "circulo.h"
 #include <math.h>
+#define pi 3.14
 
 using namespace std;
 
 double Vector::rad(){
 	cout<<"Radio: ";
-	return sqrt(((pow(end.x-start.x,2))+(pow(end.y-start.y,2))));
+	return sqrt(pow((end.x-start.x),2)+pow((end.y-start.y),2));
 }
 
 double Vector::diameter(){
 	cout<<"Diametro: ";
-	return (sqrt(((pow(end.x-start.x,2))+(pow(end.y-start.y,2)))))*2;
+	return sqrt(pow((end.x-start.x),2)+pow((end.y-start.y),2))*2;
 }
 
 void Vector::print(){
-	cout<<"Centro: "<<"("<<start.x<<","<<end.x<<")"<<endl;
+	cout<<"Centro: "<<"("<<start.x<<","<<start.y<<")"<<endl;
 }
 
 int main() {
-	float p, q, r, s, pi;
-	pi = 3.1415;
 	Vector vec1;
 	cout<<"Ingrese coordenadas del centro: "<<endl;
-	cin>>p;
-	cin>>q;
+	cin>>vec1.start.x;
+	cin>>vec1.start.y;
 	cout<<"Ingrese un punto de la circunferencia: "<<endl;
-	cin>>r;
-	cin>>s;
-	vec1.start.x = p;
-	vec1.start.y = r;
-	vec1.end.x = q;
-	vec1.end.y = s;
+	cin>>vec1.end.x;
+	cin>>vec1.end.y;
 	vec1.print();
 	double rad = vec1.rad();
 	cout<<rad<<endl;
