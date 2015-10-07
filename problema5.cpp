@@ -5,13 +5,13 @@
 using namespace std;
 
 int main () {
-	string line;
-	ifstream myfile ("archivo.txt");
-	if (myfile.is_open()){
-		while ( getline (myfile,line) ){
-			cout << line << '\n';
+	string text;
+	ifstream bloc("archivo.txt");
+	if (bloc.is_open()){
+		while(getline(bloc,text)){
+			cout << text <<endl;
 		}
-		myfile.close();
+		bloc.close();
 	}
 	return 0;
 }
