@@ -5,10 +5,6 @@ int matrix1[100][100], matrix2[100][100], matrix3[100][100];
 int fil1, col1, col2;
 
 void matriz1(){
-	cout<<"Ingrese el numero de filas de Matriz 1: ";
-	cin>>fil1;
-	cout<<"Ingrese el numero de columnas de Matriz 1: ";
-	cin>>col1;
 	matrix1[1][1] = matrix1[fil1][col1];
 	for(int i = 0; i<fil1; i++){
 		for(int j = 0; j<col1; j++){
@@ -27,9 +23,6 @@ void matriz1(){
 }
 
 void matriz2(){
-	cout<<"El numero de filas de Matriz 2 es: "<<col1<<endl;
-	cout<<"Ingrese el numero de columnas de Matriz 2: ";
-	cin>>col2;
 	matrix2[1][1] = matrix2[col1][col2];
 	for(int i = 0; i<col1; i++){
 		for(int j = 0; j<col2; j++){
@@ -66,8 +59,15 @@ void productMatrix(){
 }
 
 int main(){
+	cout<<"Ingrese el numero de filas de Matriz 1: ";
+	cin>>fil1;
+	cout<<"Ingrese el numero de columnas de Matriz 1: ";
+	cin>>col1;
 	matriz1();
 	cout<<"\n";
+	cout<<"El numero de filas de Matriz 2 es: "<<col1<<endl;
+	cout<<"Ingrese el numero de columnas de Matriz 2: ";
+	cin>>col2;
 	matriz2();
 	productMatrix();
 	return 0;
