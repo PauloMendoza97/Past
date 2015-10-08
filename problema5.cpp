@@ -5,12 +5,6 @@
 using namespace std;
 string abrir(string text);
 
-int main(){
-	string text;
-	abrir(text);
-	return 0;
-}
-
 string abrir(string text){
 	ifstream bloc("archivo.txt");
 	if (bloc.is_open()){
@@ -19,5 +13,11 @@ string abrir(string text){
 		}
 		bloc.close();
 	}
+}
+
+int main(){
+	string text;
+	abrir(text);
+	return 0;
 }
 
