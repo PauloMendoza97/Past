@@ -1,15 +1,20 @@
 #include <iostream>
 
 using namespace std;
+int n;
 
-int main(){
-	int n, fac;
-	fac=1;
-	cout<<"Factorial de: ";
-	cin>>n;
+void factorial(){
+	int fac=1;
 	for(int i=2; i<=n; i++){
 		fac = fac*i;
 	}
 	cout<<"Es: "<<fac;
+}
+
+int main(){
+	cout<<"Factorial de: ";
+	cin>>n;
+	factorial();
 	return 0;
 }
+
