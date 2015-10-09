@@ -31,4 +31,5 @@ int main(){
 	cout<<"Elemento a buscar: ";
 	cin>>element;
 	buscar();
+	return 0;
 }
