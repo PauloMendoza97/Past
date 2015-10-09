@@ -29,14 +29,12 @@ void ssort(){
 			}
 		}
 	}
-	cout<<"El arreglo ordenado por ssort es: ";
 	for(int i=0;i<n;i++){
 		cout<<arr[i]<<" ";
 	}
 } 
 
 void sort(){
-	cout<<"El arreglo ordenado por sort es: ";
 	sort(arr, arr+n);
 	for(int i = 0; i<n; i++){
 		cout<<arr[i]<<" ";
@@ -48,8 +46,10 @@ int main(){
 	cin>>n;
 	creararr();
 	cout<<"\n";
+	cout<<"El arreglo ordenado por ssort es: ";
 	ssort();
 	cout<<"\n";
+	cout<<"El arreglo ordenado por sort es: ";
 	sort();
 	return 0;
 }
