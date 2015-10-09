@@ -22,13 +22,11 @@ void comparar(string a, string b){
 	}
 }
 int main(){
-	string a;
-	string b;
+	string a, b;
 	int op;
-	cout<<"Ingrese la cadena A:"<<endl;
+	cout<<"Ingrese la cadena A: ";
 	cin>>a;
-	cout<<"\n";
-	cout<<"Ingrese cadena B:"<<endl;
+	cout<<"Ingrese cadena B: ";
 	cin>>b;
 	cout<<"\n";
 	cout<<"1. Copiar el contenido de una cadena en otra"<<endl;
