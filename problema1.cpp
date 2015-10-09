@@ -6,7 +6,7 @@ int fil1, col1, col2;
 
 void matriz1(){
 	matrix1 = new int *[fil1];
-	for(int i = 0; i<fil1; i++)    {
+	for(int i = 0; i<fil1; i++){
 		matrix1[i] = new int[col1];
 	}
 	for(int i = 0; i<fil1; i++){
