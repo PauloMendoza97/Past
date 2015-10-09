@@ -1,11 +1,14 @@
 #include <iostream>
 
 using namespace std;
-int matrix1[100][100], matrix2[100][100], matrix3[100][100];
+int **matrix1, **matrix2, **matrix3;
 int fil1, col1, col2;
 
 void matriz1(){
-	matrix1[1][1] = matrix1[fil1][col1];
+	matrix1 = new int *[fil1];
+	for(int i = 0; i<fil1; i++)    {
+		matrix1[i] = new int[col1];
+	}
 	for(int i = 0; i<fil1; i++){
 		for(int j = 0; j<col1; j++){
 			cout<<"Ingrese el valor "<<"("<<i<<","<<j<<")"<<": ";
@@ -23,7 +26,10 @@ void matriz1(){
 }
 
 void matriz2(){
-	matrix2[1][1] = matrix2[col1][col2];
+	matrix2 = new int *[col1];
+	for(int i = 0; i<col1; i++)    {
+		matrix2[i] = new int[col2];
+	}
 	for(int i = 0; i<col1; i++){
 		for(int j = 0; j<col2; j++){
 			cout<<"Ingrese el valor "<<"("<<i<<","<<j<<")"<<": ";
@@ -41,13 +47,22 @@ void matriz2(){
 }
 
 void productMatrix(){
-	for(int i=0; i<fil1; ++i)
-		for(int j=0; j<col2; ++j)
+	matrix3 = new int *[fil1];
+	for(int i = 0; i<fil1; i++){
+		matrix3[i] = new int[col2];
+	}
+	for(int i=0; i<fil1; ++i){
+		for(int j=0; j<col2; ++j){
 			matrix3[i][j] = 0;
-	for(int i=0; i<fil1; ++i)
-		for(int j=0; j<col2; ++j)
-			for(int z=0; z<col1; ++z)
+		}
+	}
+	for(int i=0; i<fil1; ++i){
+		for(int j=0; j<col2; ++j){
+			for(int z=0; z<col1; ++z){
 				matrix3[i][j] += matrix1[i][z] * matrix2[z][j];
+			}
+		}
+	}
 	cout<<"\n";
 	cout<<"La Matriz 1 por la Matriz 2 es:"<<endl;
 	for(int i=0; i<fil1; ++i){
@@ -72,3 +87,4 @@ int main(){
 	productMatrix();
 	return 0;
 }
+
