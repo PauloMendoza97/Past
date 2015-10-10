@@ -1,9 +1,5 @@
 //vector.h - header file
-
-class Point{
-public:
-	double x,y;
-};
+#include "point.h"
 
 class Vector{
 public:
