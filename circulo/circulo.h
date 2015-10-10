@@ -1,9 +1,5 @@
 //circulo.h - header file
-
-class Point{
-public:
-	double x,y;
-};
+#include "circulopoint.h"
 
 class Vector{
 public:
