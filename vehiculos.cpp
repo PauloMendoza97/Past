@@ -27,8 +27,6 @@ public :
 };
 
 int main(){
-	Vehicle.veh;
-	Car.bus;
 	string licencia, estilo;
 	int age;
 	cout<<"Licencia: "<<endl ;
@@ -37,9 +35,6 @@ int main(){
 	cin>>age;
 	cout<<"Estilo: "<<endl ;
 	cin>>estilo;
-	Car.license=licencia;
-	Car.year=age;
-	Car.style=estilo;
 	cout<<&getLicense()<<endl;
 	cout<<&getYear()<<endl;
 	cout<<&getStyle()<<endl;
