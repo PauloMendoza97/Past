@@ -1,11 +1,15 @@
 #include <vector>
+
 using namespace std;
 
 template<typename T>
+
 class Stack{
-   private:
+	
+private:
       vector<T> container;
-   public:
+      
+public:
       void push(T new_element){
 	 container.push_back(new_element);
       }
@@ -27,5 +31,5 @@ class Stack{
 	 }
 	 return stack3;
 	      
-      }
+     }
 };
