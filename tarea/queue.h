@@ -1,9 +1,14 @@
 #include <deque>
+
 using namespace std;
+
 template <typename T>
+
 class Queue{
+    
 private:
     deque<T> container;
+    
 public:
     bool Empty(){
         return container.empty();
