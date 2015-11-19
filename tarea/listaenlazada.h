@@ -1,9 +1,14 @@
 #include <vector>
- using namespace std;
- template<typename T>
- class Lista{
+
+using namespace std;
+ 
+template<typename T>
+
+class Lista{
+ 
  private:
     vector<T>container;
+    
  public:
     void Add_item(T item){
         container.push_back();
@@ -31,4 +36,4 @@
         }
         return lista3;
     }
- };
+};
