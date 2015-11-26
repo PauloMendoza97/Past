@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Stack.h"
+#include "stack.h"
 
 template<typename T>
 bool Stack1<T>::vacio()
